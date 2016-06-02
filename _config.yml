@@ -7,14 +7,16 @@
 
 # Site settings
 encoding: utf-8
-title: Workshop Python Científico
+title: Curso de Python Científico
 email: fnbellomo@gmail.com
+author: fnbellomo
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Curso-Taller de Programación Científica en Python para Ciencias de la Atmósfer  a y los Océanos ha realizarse desde el Lunes 1 al viernes 4 e agosto del 2016   en la UBA. Esta curso cuenta con el aval DCAO/FCEN-UBA.
+
+keywords: Python científico, Curso, Atmósfera, Océanos, CIMA, DCAO/FCEN-UBA
 
 # Server
+#baseurl: ""
 baseurl: "/wpc" # the subpath of your site, e.g. /blog
 #url: "http://yourdomain.com" # the base hostname & protocol for your site
 url: "http://pewen.github.io"

@@ -8,6 +8,7 @@
  ****************************************/
 body {
     font-family: Helvetica, Arial;
+    position: relative;
 }
 
 .site-name {
@@ -169,7 +170,7 @@ section {
 
 .box-def p {
     color: #87818C;
-    font-size: 16px;
+    font-size: 19px;
     letter-spacing: -0.02em;
     line-height: 1.6em;
     padding: 0px 15px;
@@ -202,7 +203,7 @@ section {
 }
 
 /****************************************
- * Abstract
+ * Main page
  ***************************************/
 #abstract {
     background-color: #4c5c96;
@@ -245,6 +246,15 @@ section {
     height: 80%;
     color: #ffffff;
     text-align: center;
+}
+
+
+/****************************************
+ * /requeriments
+ ***************************************/
+#requirements {
+    background-color: #45558d;
+    padding-top: 90px;
 }
 
 
