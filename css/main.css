@@ -231,6 +231,7 @@ section {
 
 #organizers {
     background-color: #454858;
+    background-color: #45558d;
     text-align: left;
 }
 
@@ -241,7 +242,7 @@ section {
 }
 
 #aplication {
-    background: url("../imgs/event.jpg");
+    background: linear-gradient(to top, rgba(46, 49, 65, 0.3), rgba(46, 49, 65, 0.3)), url("../imgs/event.jpg");
     font-weight: bold;
     height: 80%;
     color: #ffffff;
