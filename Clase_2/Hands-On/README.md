@@ -1,5 +1,5 @@
 # Hands-On con git
-Ejercicios para practicar comandos básicos de git y como trabajar con github.
+Ejercicios para practicar comandos básicos de git y cómo trabajar con github.
 
 ## El repositorio
 
@@ -62,7 +62,7 @@ $ git branch tp_final
 $ git checkout tp_final
 ```
 
-Editamos un archivo nuevo, tp_final.md, donde explicamos cual va a ser nuestro trabajo final
+Editamos un archivo nuevo, tp_final.md, donde explicamos cuál va a ser nuestro trabajo final
 
 ```
 $ emacs tp_final.md
@@ -73,14 +73,14 @@ $ git commit
 
 Y ahora, en master, hacemos un merge de ambas branches por separado:
 (fíjense que no importa que el orden sea el mismo que en el que 
-las modificamos. es sensato porque las branches no se comunican)
+las modificamos. Lo que es sensato, porque las branches no se comunican)
 
 ```
 $ git merge --no-ff soluciones
 $ git merge --no-ff tp_final
 ```
 
-La opción --no-ff sirve para que no "mezcle" las dos branches, y queda más prolijo el network. recomienod que la usen siempre, pero no es fundamental.
+La opción --no-ff sirve para que no "mezcle" las dos branches, y queda más prolijo el network. Recomiendo que la usen siempre, pero no es fundamental.
 
 Si quieren ver cómo quedó la historia del repo:
 
