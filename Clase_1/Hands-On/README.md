@@ -92,11 +92,11 @@ Escribir un script en python que extraiga del archivo **log.melt-berendsen** los
 
 ### 8- Extraer dos columnas
 
-Escribir un script en python que extraiga del archivo anterior la primera y una segunda columna elegida por el usuario. Luego guardar estos datos en un nuevo archivo.
+Escribir un script en python que extraiga del archivo ya recortado la primera y la cuarta columna. Luego guardar estos datos en un nuevo archivo.
+
+### 9- Integración
+
+En un solo script, juntar las dos funciones anteriores. Es decir, que un usuario pase por linea de comando el nombre del archivo a recortar y, opcionalmente, las columnas que quiere y los delimitadores de los datos ("Step" y "Loop" en el ejemplo 7). si no especifica las columnas, que en la salida guarde todas.
 
 **Tips:**
 * Python posee dos formas de pasar argumentos por linea de comando: *[input()](https://docs.python.org/3/library/functions.html#input)* y *[argparse](https://docs.python.org/3.4/library/argparse.html)* (*argparse* es bastante más completa).
-
-### 9- Promedio de columnas
-
-Escribir un script en python que calcule el promedio de dos columnas seleccionadas por el usuario del archivo inicial.
