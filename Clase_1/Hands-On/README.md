@@ -78,7 +78,7 @@ La idea de las siguientes 3 tareas es que sean escritas de forma modular para lu
 
 ### 7- Extracción
 
-Escribir un script en python que extraiga del archivo **log.melt-berendsen** los datos del progreso de la simulación. Estos datos son los que se encuentran entre la linea que comienza con "Step" y la linea que comienza con "Loop". Luego guardar estos datos (con el mismo formato) en un nuevo archivo.
+Escribir un script en python que extraiga del archivo **data/log.melt-berendsen** los datos del progreso de la simulación. Estos datos son los que se encuentran entre la linea que comienza con "Step" y la linea que comienza con "Loop". Luego guardar estos datos (con el mismo formato) en un nuevo archivo.
 
 **Tips:**
 * Usar la función *[open](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files)*
@@ -92,11 +92,14 @@ Escribir un script en python que extraiga del archivo **log.melt-berendsen** los
 
 ### 8- Extraer dos columnas
 
-Escribir un script en python que extraiga del archivo anterior la primera y una segunda columna elegida por el usuario. Luego guardar estos datos en un nuevo archivo.
+Al script anterior, agregarle una nueva función que extraiga del archivo recortado, la primera y la cuarta columna a un nuevo archivo.
 
-**Tips:**
+**Tip:**
+* [str.split()](https://docs.python.org/3.5/library/stdtypes.html#str.split) para cortar string.
+
+### 9- Integrando a la linea de comando
+
+Generalmente, nos va a resultar muy útil poder pasar los argumentos necesario desde la linea de comando. Modificar el script anterior para que el usuario le pueda el archivo que desea recorta, y que como parámetro optativo le pueda pasar las dos palabras que me limitan mis datos, el nombre del archivo de salida y que columnas extraer.
+
+**Tip:**
 * Python posee dos formas de pasar argumentos por linea de comando: *[input()](https://docs.python.org/3/library/functions.html#input)* y *[argparse](https://docs.python.org/3.4/library/argparse.html)* (*argparse* es bastante más completa).
-
-### 9- Promedio de columnas
-
-Escribir un script en python que calcule el promedio de dos columnas seleccionadas por el usuario del archivo inicial.
