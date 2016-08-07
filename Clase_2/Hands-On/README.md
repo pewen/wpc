@@ -1,101 +1,44 @@
-# Hands-On con git
-Ejercicios para practicar comandos básicos de git y cómo trabajar con github.
+# Hands-On Numpy y Matplolib
 
-## El repositorio
+## Agua o tierra
 
-La idea es trabajar sobre un fork del repositorio del curso. Entonces:
+Escriba un programa que tome coordenadas geográficas como entrada e imprima si esa coordenada es tierra o agua. El programa debe ser usado como un pipe de la linea de comandos.
 
-```
-$ git https://github.com/pewen/wpc.git
-$ cd wpc
-```
+**Tip:**
+* [numpy.fromfile](https://docs.scipy.org/doc/numpy/reference/generated/numpy.fromfile.html)
+* El archivo *data/gl-latlong-1km-landcover.bsq.bz2* es un binario que contiene de, de forma codificada, si la posición que consultamos es agua o tierra. El archivo *data/gl0500bs.txt* posee características de este binario.
 
-Miramos los branches que existen
+Los datos se extrajeron de: http://www.landcover.org/data/landcover/
 
-```
-$ git branch 
-    gh-pages
-    master
-  * original
-```
+### Eventos
 
-Editamos el archivo de README agregando los datos personales y hacemos un nuevo commit
+Por cada evento que hay en el archivo *data/events.txt*, agregarle una columna al final indicando si ocurrió en agua o tierra.
 
-```
-emacs README.md
-.........
-$ git add README.md
-$ git commit
-```
+### Graficando
 
-Ya hay un nuevo snapshot. Ahora creamos una branch donde vamos a poner todas nuestras soluciones.
+Por cada evento que el usuario pasa por linea de comando o mediante un archivo de texto, marcarlo con un cuadrado sobre el mapa *data/gl-latlong-1km-landcover.preview.jpg*. Si el evento ocurrió sobre agua, que el cuadrado sea de color azul. Caso contrario de color rojo.
+
+
+## Datos faltantes
+
+Muchos archivos de datos poseen el siguiente formato:
 
 ```
-$ git branch soluciones
+fecha inicial - fecha final
+datos
+dato faltante
+mas texto
 ```
 
-Y nos movemos a ella
+Escribir un script en python que reciba una archivo de este tipo (*data/nina3.data*), y retorne una matriz remplazado los valores faltantes por NaN.
 
-```
-$ git checkout soluciones
-```
+**Tips:**
+* Para la lectura de este tipo de archivo, se puede utilizar [numpy.fromfile](https://docs.scipy.org/doc/numpy/reference/generated/numpy.fromfile.html) o de la biblioteca Pandas, [from_csv](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
 
-En esta branch, editamos README.md de nuevo y explicamos que en este branch van a estar nuestras soluciones
+## Promedio
 
-```
-$ emacs README.md
-  ...
-$ git add README.md
-$ git commit
-```
+Calcular los promedio y desviación standar por mes y por año.
 
-Ahora vamos a master (que no tiene estos cambios, porque es otra branch!)
+### Graficar
 
-```
-$ git checkout master
-```
-
-Y a partir de master creamos una nueva branch donde vamos a trabajar el proyecto final
-
-```
-$ git branch tp_final
-$ git checkout tp_final
-```
-
-Editamos un archivo nuevo, tp_final.md, donde explicamos cuál va a ser nuestro trabajo final
-
-```
-$ emacs tp_final.md
-  ...
-$ git add tp_final.md
-$ git commit
-```
-
-Y ahora, en master, hacemos un merge de ambas branches por separado:
-(fíjense que no importa que el orden sea el mismo que en el que 
-las modificamos. Lo que es sensato, porque las branches no se comunican)
-
-```
-$ git merge --no-ff soluciones
-$ git merge --no-ff tp_final
-```
-
-La opción --no-ff sirve para que no "mezcle" las dos branches, y queda más prolijo el network. Recomiendo que la usen siempre, pero no es fundamental.
-
-Si quieren ver cómo quedó la historia del repo:
-
-```
-$ git log --oneline --graph
-```
-
-Finalmente, hacemos un push de todas las branches:
-
-```
-$ git push -u origin master
-$ git push -u origin soluciones
-$ git push -u origin tp_final
-```
-
-Y listo! en nuestra cuenta de github ya tiene que estar subido.
-
-
+Graficar estos datos usando matplotlib (histograma, precipitación vs mes).
