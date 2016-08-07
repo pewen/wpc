@@ -260,6 +260,23 @@ section {
 
 
 /****************************************
+ * /clases
+ ***************************************/
+#clases {
+    background-color: #3d4051;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    text-align: left;
+}
+
+#clases h2 {
+    color: #ffffff;
+    padding-bottom: 1em;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+}
+
+
+/****************************************
  * Footer
  ***************************************/
 .footer {
