@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+
+# For Ipython
+.ipynb_checkpoints/
+
+# C extensions
+*.so
+
+# For emacs
+*~
+\#*
+.#*
+
+# Scribus autosave
+*.sla.autosave
+
+# Some directorys
+output
+# Not upload books and paper, by mistake, not legally obtained
+doc_ref
