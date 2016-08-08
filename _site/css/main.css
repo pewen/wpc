@@ -275,6 +275,18 @@ section {
     border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 }
 
+.box-link {
+    padding-bottom: 30px;
+}
+
+.box-link p {
+    margin-bottom: 0px;
+}
+
+.box-link a {
+    padding-left: 30px;
+    font-size: 18px;
+}
 
 /****************************************
  * Footer
